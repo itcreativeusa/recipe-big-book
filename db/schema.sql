@@ -1,0 +1,8 @@
+-- DROP DATABASE
+DROP DATABASE IF EXISTS recipes_db;
+
+-- CREATE DATABASE
+CREATE DATABASE recipes_db;
+
+-- USE DATABASE
+USE recipes_db;

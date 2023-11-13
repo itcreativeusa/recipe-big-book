@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Master</title>
+    <link rel="stylesheet" href="/css/jass.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <div id="bodyMain" class="flex-column justify-space-around">
+      <header class="display-flex justify-space-between align-center p-2">
+        <a href="/"><img src="/images/logo.jpeg" alt="Recipe Master logo" /></a>
+        <h1>Recipe Master</h1>
+        <!-- Display "Hello, user" -->
+        {{#if name}}
+          <div class="row">
+            <div class="col-auto">
+              <h2>Hello, {{name}}!</h2>
+            </div>
+          </div>
+        {{/if}}
+        <nav>
+          <a href="/">HOME</a>
+          <!-- Render login or logout links -->
+          {{#if logged_in}}<!-- Display "Hello, user" -->
+
+            <a href="/profile">MY RECIPES</a>
+            <button id="logout">LOGOUT</button>
+          {{else}}
+            <a href="login">LOGIN</a>
+          {{/if}}
+        </nav>
+      </header>
+      <main class="container container-fluid mt-5">
+        <div class="container-center">
+          <!-- Render body -->
+          {{{body}}}
+        </div>
+      </main>
+      <footer>
+        <a href="https://github.com/kuocats/Recipe_Masters">
+          Recipe masters GitHub link</a>
+      </footer>
+    </div>
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+
+    {{/if}}
+  </body>
+
+</html>

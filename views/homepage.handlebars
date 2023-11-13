@@ -1,0 +1,62 @@
+<div class="container-center" id="home-body">
+  <div class="container-center" id="homeP">
+    <p id="rm-description">
+      Looking for ideas to spice up your kitchen menu? Or maybe you want to use
+      up an ingredient in your fridge or pantry before it goes bad. Look no
+      further the Recipe Master is here to help! Create a profile and share your
+      favorite recipes! Search by keyword or click on a category to browse
+      recipes.
+    </p>
+
+    <div id="noRecipesMessage" style="display: none;">No recipes found. Try
+      another keyword.<span style="font-size:50px;">&#128533;</span></div>
+
+    <form class="search-bar" id="searchForm">
+      <label for="recipeInput">Search Keywords</label>
+      <input type="text" id="recipeInput" placeholder="Enter a recipe name" />
+      <button type="submit">Search</button>
+    </form>
+  </div>
+  <div id="recipeContainer">
+    OR click here to see all recipes
+    <a href="/recipes">See All Recipes</a>
+  </div>
+  <div id="homeCategories">
+    <h3 id="categories-h3">Categories:</h3>
+    <section class="categories">
+      <div class="grid-item">
+        <img src="/images/breakfast.jpg" alt="breakfast img" />
+        <a href="/recipes?categories=Breakfast">Breakfast</a>
+      </div>
+      <div class="grid-item">
+        <img src="/images/brunch.jpg" alt="brunch img" />
+        <a href="/recipes?categories=Lunch">Lunch</a>
+      </div>
+      <div class="grid-item">
+        <img src="/images/dinner.jpg" alt="dinner img" />
+        <a href="/recipes?categories=Dinner">Dinner</a>
+      </div>
+      <div class="grid-item">
+        <img src="/images/salad.jpg" alt="salad img" />
+        <a href="/recipes?categories=Seafood">Seafood</a>
+      </div>
+      <div class="grid-item">
+        <img src="/images/burger.jpg" alt="burger img" />
+        <a href="/recipes?categories=Rice">Rice</a>
+      </div>
+      <div class="grid-item">
+        <img src="/images/dessert.jpg" alt="dessert img" />
+        <a href="/recipes?categories=Dessert">Dessert</a>
+      </div>
+      <div>
+
+      </div>
+      <div class="grid-item" id="categoryDrinks">
+        <img src="/images/drinks.jpg" alt="drinks img" />
+        <a href="/recipes?categories=Drinks">Drinks</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script src="/js/api.js"></script>

@@ -1,0 +1,80 @@
+<div class="container">
+  <div id="profileMain" class="row">
+    <div class="col-md-6">
+
+      <!-- Form -->
+      <h1>Create Recipe</h1>
+      <div id="success-message" style="display: none;">
+        Recipe added successfully!<span style="font-size:50px;">&#128523;</span>
+      </div>
+
+      <form
+        id="create-recipe-form"
+        class="form"
+        action="/api/recipes"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="form-group">
+          <label for="recipe_name">Recipe Name:</label>
+          <input
+            class="form-input"
+            type="text"
+            id="recipe_name"
+            name="recipe_name"
+            required
+          />
+        </div>
+        <div>
+          <label for="cook_time">Cook Time (minutes):</label>
+          <input type="number" id="cook_time" name="cook_time" required />
+        </div>
+        <div>
+          <label for="category_id">Category:</label>
+          <select id="category_id" name="category_id" required>
+            <option value="" disabled selected>Select a category</option>
+            <!-- Populate categories dynamically using JavaScript -->
+          </select>
+        </div>
+        <div>
+          <label for="recipe_text">Recipe Instructions:</label>
+          <textarea
+            id="recipe_text"
+            name="recipe_text"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        <div>
+          <label for="ingredients">Ingredients:</label>
+          <div id="ingredients-container">
+            <div class="ingredient-row">
+              <input type="text" name="ingredientNames[]" required />
+              <button
+                type="button"
+                class="remove-ingredient-btn"
+              >Remove</button>
+            </div>
+          </div>
+          <button type="button" id="add-ingredient-btn">Add Ingredient</button>
+        </div>
+        <div>
+          <label for="picture">Recipe Image:</label>
+          <input type="file" name="picture" accept="image/*" required />
+        </div>
+        <input type="submit" value="Create Recipe" />
+      </form>
+
+    </div>
+    <div id="profileRecipes" class="col-md-6">
+      <!-- List of Recipes -->
+      <div class="recipe-list">
+        <h3>Current Recipes:</h3>
+        <div class="recipe-list-container">
+          <!-- Recipe cards will be populated dynamically using JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="./js/profile.js" defer></script>
