@@ -1,4 +1,5 @@
 /* General Styles */
+
 body {
   display: flex;
   background-color: #fff;
@@ -23,14 +24,15 @@ main {
 .logo {
   color: #69b992;
   font-size: 3rem;
-  transition: color 0.3s; /* Transition for smooth color change */
+  transition: color 0.3s, text-shadow 0.3s;
+  text-decoration: none;
 }
 .logo:hover {
-  color: #5f060a; /* Change the color on hover */
   text-decoration: underline;
 }
 .logo-img {
   height: 100px;
+  margin-left: 1%;
 }
 #body {
   display: flex;
@@ -69,12 +71,23 @@ h2 {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  border: solid #69b992 3px;
+  border-radius: 10px;
   padding: 10px;
+  margin-bottom: 3%;
+  background-image: url(../images/bg13.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.recipe-card ul {
+  text-align: left;
+  list-style-image: url(../images/star.png);
 }
 .recipe-card p {
-  padding: 10px;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #recipeList {
@@ -95,27 +108,30 @@ h2 {
 .grid-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly; /* Adjust as needed */
 }
 
 .grid-item {
-  margin: 5%;
+  flex: 0 0 calc(25% - 20px); /* Set the width to 25%, subtracting margin */
+  margin: 10px; /* Adjust margin as needed for spacing */
   text-align: center;
-  width: 15%; /* Set the width to 20% to ensure 4 items in a row */
 }
+
 .grid-item a {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
+  text-decoration: none;
 }
+
 .grid-item a:hover {
   text-decoration: underline;
   color: #69b992;
 }
 
 .grid-item a img {
-  margin-bottom: 10px; /* Add some space between the icon and text */
+  margin-bottom: 10px;
 }
 .recipe-info {
   display: flex;
@@ -134,9 +150,11 @@ h2 {
 
 /* Recipe Photo on the Main Page */
 .recipe-photo {
-  width: 400px;
+  width: 500px;
+  height: 300px;
   border-radius: 10px;
-  height: auto;
+  object-fit: cover;
+  padding: 10px;
 }
 
 /* Footer Styles */
@@ -169,12 +187,19 @@ footer a:hover {
   background-color: #5f060a;
 }
 /* Authentication Styles */
-
-auth {
+.auth {
   margin-right: 1%;
 }
+.auth a,
+#profile,
+#logout {
+  display: flex;
+  align-items: center;
+}
 
-.auth a {
+.auth a,
+#profile,
+#logout {
   background-color: #69b992;
   color: white;
   padding: 10px;
@@ -189,8 +214,10 @@ auth {
 
 #logout {
   background-color: #d90e18;
-  color: white;
-  padding: 10px;
+}
+
+#profile,
+#logout {
   border-radius: 10px;
   text-decoration: none;
   transition: background-color 0.3s;
@@ -198,12 +225,21 @@ auth {
   font-family: "Assistant", sans-serif;
   font-size: 1.5rem;
   line-height: 1.5;
+  cursor: pointer;
+  display: inline-block;
 }
-.auth a:hover {
-  background-color: #5f060a;
-}
+
+#profile:hover,
 #logout:hover {
   background-color: #5f060a;
+}
+.delete-recipe-btn {
+  background-color: #d90e18;
+  border-radius: 10px;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
 /* Home Page Styles */
 #homeP {
@@ -404,25 +440,9 @@ auth {
 #recipeContainer a:active {
   background-color: #5f060a;
 }
-.recipe-card {
-  background-image: url(../images/bg13.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  border: solid #69b992 3px;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
-}
 
 .recipe-card a {
   display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
   color: #69b992;
   transition: background-color 0.3s;
 }

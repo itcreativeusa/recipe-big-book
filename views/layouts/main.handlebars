@@ -14,6 +14,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
@@ -54,7 +60,7 @@
         <!-- Render login or logout links -->
         {{#if logged_in}}<!-- Display "Hello, user" -->
 
-          <a href="/profile">Profile</a>
+          <a href="/profile" id="profile">Profile</a>
           <button id="logout">Logout</button>
         {{else}}
           <a href="login">

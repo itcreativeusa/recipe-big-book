@@ -12,7 +12,7 @@ const createRecipeCard = (recipe) => {
   recipeCard.appendChild(cookTime);
 
   const ingredientsTitle = document.createElement("h3");
-  ingredientsTitle.textContent = "Ingredients";
+  ingredientsTitle.textContent = "Ingredients:";
   recipeCard.appendChild(ingredientsTitle);
 
   const ingredientsList = document.createElement("ul");
