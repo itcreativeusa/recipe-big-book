@@ -5,49 +5,84 @@
     <title>Recipe Master</title>
     <link rel="stylesheet" href="/css/jass.css" />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   </head>
 
   <body>
-    <div id="bodyMain" class="flex-column justify-space-around">
-      <header class="display-flex justify-space-between align-center p-2">
-        <a href="/"><img src="/images/logo.jpeg" alt="Recipe Master logo" /></a>
-        <h1>Recipe Master</h1>
-        <!-- Display "Hello, user" -->
-        {{#if name}}
-          <div class="row">
-            <div class="col-auto">
-              <h2>Hello, {{name}}!</h2>
-            </div>
-          </div>
-        {{/if}}
-        <nav>
-          <a href="/">HOME</a>
-          <!-- Render login or logout links -->
-          {{#if logged_in}}<!-- Display "Hello, user" -->
+    <header class="display-flex justify-space-between align-center">
+      <a href="/"><img
+          src="/images/logo.png"
+          alt="recipe-big-book logo"
+          class="logo-img"
+        /></a>
+      <a href="/"> <div class="logo">Recipe Big Book</div></a>
+      <div id="noRecipesMessage" style="display: none;">
+        No recipes found. Try another keyword.
+        <span style="font-size:50px;">&#128533;</span>
+      </div>
 
-            <a href="/profile">MY RECIPES</a>
-            <button id="logout">LOGOUT</button>
-          {{else}}
-            <a href="login">LOGIN</a>
-          {{/if}}
-        </nav>
-      </header>
-      <main class="container container-fluid mt-5">
-        <div class="container-center">
-          <!-- Render body -->
-          {{{body}}}
+      <form class="search-bar" id="searchForm">
+        <input
+          type="text"
+          id="recipeInput"
+          placeholder="Enter a recipe name or ingredient"
+        />
+        <button class="submit-btn" type="submit">Search</button>
+      </form>
+
+      <!-- Display "Hello, user" -->
+      {{#if name}}
+        <div class="row">
+          <div class="col-auto">
+            <h2>Hello, {{name}}!</h2>
+          </div>
         </div>
-      </main>
-      <footer>
-        <a href="https://github.com/kuocats/Recipe_Masters">
-          Recipe masters GitHub link</a>
-      </footer>
-    </div>
+      {{/if}}
+      <nav class="auth">
+        <!-- Render login or logout links -->
+        {{#if logged_in}}<!-- Display "Hello, user" -->
+
+          <a href="/profile">Profile</a>
+          <button id="logout">Logout</button>
+        {{else}}
+          <a href="login">
+            Login</a>
+          <a href="signup">Sign Up</a>
+        {{/if}}
+      </nav>
+    </header>
+
+    <main class="container container-fluid">
+      <!-- Render body -->
+      {{{body}}}
+    </main>
+    <footer>
+      <a href="https://github.com/itcreativeusa">
+        <img
+          src="/images/github.png"
+          class="icon"
+          alt="recipe-big-book logo"
+          class="logo"
+        />
+        Kateryna Stetsenko
+      </a>
+    </footer>
+
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
       <script src="/js/logout.js"></script>
-
     {{/if}}
   </body>
-
 </html>

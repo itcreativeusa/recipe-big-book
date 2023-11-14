@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const recipeImage = document.createElement("img");
 
           // Set the content for each element
+          recipeDiv.id = "recipe-container";
           recipeName.textContent = recipe.recipe_name;
           recipeText.textContent = recipe.recipe_text;
           cookTime.textContent = "Cook Time: " + recipe.cook_time + " minutes";
