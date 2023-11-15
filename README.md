@@ -47,7 +47,9 @@ This website allows users to discover and post food recipes. Users will be able 
 ## Mock-Up
 
 Screenshot located in `./images/` folder.
-![recipe-big-book](./uploads/screenshot.png)
+![recipe-big-book-home](./uploads/screenshot-1.png)
+![recipe-big-book-recipe-card](./uploads/screenshot-2.png)
+![recipe-big-book-add-recipe](./uploads/screenshot-3.png)
 
 ## Credits
 
