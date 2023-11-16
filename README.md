@@ -7,9 +7,10 @@ Recipe Big Book is a robust full-stack application designed as a recipe discover
 To become part of this culinary collection, users can easily sign up or log in to share and showcase their own recipes. The application leverages cutting-edge technologies, including Multer for image uploading, and is built on Node.js, Express.js, and Handlebars.js. The database management is handled by MySQL and Sequelize ORM, ensuring efficient data handling. Authentication features enhance user security, and the entire system is deployed on the Heroku web server for a reliable online experience.
 
 Deployed application link on GitHub
-https://github.com/kuocats/recipe-big-book
+https://github.com/itcreativeusa/recipe-big-book
 
 Deployed application link on Heroku
+https://recipe-big-book-576bcce711de.herokuapp.com/
 
 ## Table of Contents
 
