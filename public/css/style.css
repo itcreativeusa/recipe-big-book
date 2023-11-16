@@ -42,7 +42,9 @@ header {
   border-bottom: #69b992 3px solid;
   background-color: rgba(0, 0, 0, 0.8);
 }
-
+.welcome-message {
+  text-transform: capitalize;
+}
 h3,
 h2 {
   color: #69b992;
