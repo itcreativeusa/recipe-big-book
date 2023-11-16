@@ -2,9 +2,7 @@
 
 ## Description
 
-Recipe Big Book is a robust full-stack application designed as a recipe discovery and sharing platform for food enthusiasts. Delve into a diverse array of cuisines as users explore and contribute their favorite recipes. The user-friendly search bar at the top facilitates seamless exploration based on ingredients, categories, and dietary preferences.
-
-To become part of this culinary collection, users can easily sign up or log in to share and showcase their own recipes. The application leverages cutting-edge technologies, including Multer for image uploading, and is built on Node.js, Express.js, and Handlebars.js. The database management is handled by MySQL and Sequelize ORM, ensuring efficient data handling. Authentication features enhance user security, and the entire system is deployed on the Heroku web server for a reliable online experience.
+Recipe Big Book is a robust full-stack application for recipe discovery and sharing, catering to food enthusiasts. Users can explore diverse cuisines, contribute recipes, and utilize a user-friendly search bar for seamless exploration. Built on Node.js, Express.js, and Handlebars.js, with MySQL and Sequelize ORM for efficient data management, the platform prioritizes user security through authentication features and is deployed on the Heroku web server.
 
 Deployed application link on GitHub
 https://github.com/itcreativeusa/recipe-big-book
@@ -28,6 +26,12 @@ If users would like to run the application locally, please follow the steps belo
 
 - Clone the repository from GitHub
 - Run `npm install` to install all dependencies
+- add .env file with the following information:
+
+  - DB_NAME=your_database_name
+  - DB_USER=your_username
+  - DB_PW=your_password
+
 - Run `npm start` to start the application
 - Open the application in the browser at `http://localhost:3001`
 
@@ -60,6 +64,9 @@ https://www.npmjs.com/package/multer
 Here documentation for Sequelize fearch by word
 `[Op.like]: '%hat'`
 https://sequelize.org/docs/v6/core-concepts/model-querying-basics/
+
+Unsplash for the background images used in the application:
+https://unsplash.com/
 
 ## License
 
