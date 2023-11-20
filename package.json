@@ -1,5 +1,5 @@
 {
-  "name": "module-13-challenge-orm",
+  "name": "recipe-big-book",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,11 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "watch": "nodemon server.js",
-    "seed": "node seeds/index.js"
+    "seed": "node seeds/index.js",
+    "postinstall": "npm rebuild bcrypt --build-from-source"
   },
   "repository": {
     "type": "git",
-    "url": "git@work.github.com:coding-boot-camp/module-13-challenge-orm.git"
+    "url": "",
+    "author": "Kateryna Stetsenko"
   },
   "keywords": [],
   "author": "",
