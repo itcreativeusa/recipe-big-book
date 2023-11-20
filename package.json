@@ -9,7 +9,7 @@
     "watch": "nodemon server.js",
     "seed": "node seeds/index.js",
     "preinstall": "npm install -g npm@latest",
-    "postinstall": "npm install bcrypt --build-from-source",
+    "postinstall": "npm rebuild bcrypt --build-from-source",
     "install": "npm rebuild bcrypt --build-from-source",
     "heroku-postbuild": "npm rebuild bcrypt --build-from-source"
   },
