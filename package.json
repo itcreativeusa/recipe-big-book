@@ -9,7 +9,8 @@
     "watch": "nodemon server.js",
     "seed": "node seeds/index.js",
     "preinstall": "npm install -g npm@latest",
-    "postinstall": "npm rebuild bcrypt --build-from-source"
+    "postinstall": "",
+    "install": "npm rebuild bcrypt --build-from-source"
   },
   "engines": {
     "node": "14.x",
