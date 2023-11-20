@@ -10,9 +10,7 @@
     "seed": "node seeds/index.js",
     "postinstall": "npm rebuild bcrypt --build-from-source",
     "install": "npm rebuild bcrypt --build-from-source",
-    "heroku-postbuild": "npm install --production && npm rebuild bcrypt --build-from-source"
-  },
-  "engines": {
+    "heroku-postbuild": "npm install --production=false && npm rebuild bcrypt --build-from-source",
     "node": "14.x",
     "npm": "6.x"
   },
