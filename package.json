@@ -8,10 +8,9 @@
     "start": "node server.js",
     "watch": "nodemon server.js",
     "seed": "node seeds/index.js",
-    "preinstall": "npm install -g npm@latest",
     "postinstall": "npm rebuild bcrypt --build-from-source",
     "install": "npm rebuild bcrypt --build-from-source",
-    "heroku-postbuild": "npm rebuild bcrypt --build-from-source"
+    "heroku-postbuild": "npm install && npm rebuild bcrypt --build-from-source"
   },
   "engines": {
     "node": "14.x",
