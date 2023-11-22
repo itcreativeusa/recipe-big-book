@@ -35,6 +35,8 @@ If users would like to run the application locally, please follow the steps belo
 - Run `npm start` to start the application
 - Open the application in the browser at `http://localhost:3001`
 
+- To seed the database, run `npm run seeds/index.js`
+
 ## Technologies Used
 
 - Node.js
