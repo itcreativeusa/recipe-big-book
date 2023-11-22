@@ -84,7 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
           )}`;
 
           // Append the elements to the recipeDiv
-          recipeDiv.appendChild(categoryLink);
           recipeDiv.appendChild(recipeName);
           recipeDiv.appendChild(recipeImage); // Append the image to the recipeDiv
           recipeDiv.appendChild(recipeText);
