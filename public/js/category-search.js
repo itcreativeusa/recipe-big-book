@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const apiUrl = window.location.href;
   const recipeContainer = document.getElementById("recipeContainer");
+  const categoryNameElement = document.getElementById("categoryName"); // Add this line
 
   try {
     const response = await fetch(apiUrl);
@@ -8,6 +9,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Clear the recipeContainer before adding new recipes
     recipeContainer.innerHTML = "";
+
+    if (data.length > 0) {
+      // Set category name if available
+      const category = data[0].category.category_name;
+      categoryNameElement.textContent = `Category: ${category}`;
+    }
 
     data.forEach((recipe) => {
       // Create the elements
