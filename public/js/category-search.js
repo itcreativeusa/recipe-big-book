@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const apiUrl = window.location.href;
   const recipeContainer = document.getElementById("recipeContainer");
-  const categoryNameElement = document.getElementById("categoryName"); // Add this line
-
+  const categoryNameElement = document.getElementById("categoryName");
   try {
     const response = await fetch(apiUrl);
     const data = await response.json();
