@@ -1,8 +1,8 @@
 -- DROP DATABASE
-DROP DATABASE IF EXISTS svqwo8bvp6edg58v;
+DROP DATABASE IF EXISTS recipes_db;
 
 -- CREATE DATABASE
-CREATE DATABASE svqwo8bvp6edg58v;
+CREATE DATABASE recipes_db;
 
 -- USE DATABASE
-USE svqwo8bvp6edg58v;
+USE recipes_db;
